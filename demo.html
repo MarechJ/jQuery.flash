@@ -1,0 +1,34 @@
+<!DOCTYPE htlm>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Demo - Flash effect</title>
+    <meta name="author" content="Marechal Julien">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache"> 
+    <meta http-equiv="Expires" content="0">   
+  </head>
+  <body style="background-color:grey; min-width:100%; min-height:100%">
+		<div id="target" style="background-color:black; border:1px solid white; width:100px; height:100px; margin:0 auto; color:white; text-align:center">
+			Mouse hover
+		</div>
+		<div id="advanced" style="background-color:black; border:1px solid white; width:100px; height:100px; margin:30px auto; color:white; text-align:center">
+			Click
+		</div>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.flash.js"></script>
+	<script type="text/javascript">
+			$(document).ready(function(){
+				$("#target").flash();
+				$("#advanced").flash({
+					duration: 1000,
+					event: "click",
+					image: "./images/yellow.jpg",
+					callback: function() {
+						alert("done");
+					}
+				});
+			});
+    </script>
+  </body>
+</html>
